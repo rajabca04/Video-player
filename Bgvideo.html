@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: aqua;
+  cursor: pointer;
+  
+}
+
+#myBtn:hover {
+  background: aqua;
+  color: black;
+}
+</style>
+</head>
+<body>
+    <embed src="./mixkit-light-rain-loop-1253.wav" loop="true" autostart="true" width="2" height="1">
+    <embed src="./bg_music.mp3" loop="true" autostart="true" width="2" height="1"> 
+<video autoplay muted loop id="myVideo">
+  <source src="./rain.mp4" type="video/mp4">
+</video>
+
+<div class="content" style="color:aqua;">
+  <h1>I am raja.</h1>
+  <h2>If you need a reminder of how stunning you really are, these beauty quotes will do the trick.</h2>
+  <p>
+    Beauty is more than just physical appearance—but you already knew that. Sometimes, we all just need a little reminder about what makes us truly beautiful, which is why we rounded up these inspirational beauty quotes that will remind you that beauty comes from within. These uplifting quotes about beauty will inspire self-love, confidence, and remind you how important it is to be yourself.</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+ </script>
+
+
+
+</body>
+</html>
